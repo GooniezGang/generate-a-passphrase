@@ -1,0 +1,15 @@
+import random
+
+adjectives = ['happy', 'sunny', 'brave', 'clever', 'fierce']
+nouns = ['tiger', 'river', 'mountain', 'ocean', 'forest']
+
+def generate_passphrase():
+    adjective = random.choice(adjectives)
+    noun = random.choice(nouns)
+    number = random.randint(10, 99)
+    passphrase = f'{adjective.capitalize()}_{noun.capitalize()}_{number}'
+    return passphrase
+
+if __name__ == "__main__":
+    passphrase = generate_passphrase()
+    print("Generated Passphrase:", passphrase)
